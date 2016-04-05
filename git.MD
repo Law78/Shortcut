@@ -72,3 +72,10 @@ questo rimpiazza le modifiche nell'albero di lavoro con l'ultimo contenuto prese
 Se vuoi in alternativa eliminare tutti i cambiamenti e commits fatti in locale, recupera l'ultima versione dal server e fai puntare il tuo master branch a quella versione in questo modo
 git fetch origin
 git reset --hard origin/master
+
+#tags
+È raccomandato creare dei tags nel caso in cui il software venga rilasciato. Questo è un concept già conosciuto, che esiste anche in SVN. Puoi creare un tag chiamato 1.0.0 eseguendo
+git tag 1.0.0 1b2e1d63ff
+la sequenza 1b2e1d63ff sta per i primi 10 caratteri del commit che si vuol referenziare tramite questo tag. Puoi ottenere l'id della commit tramite
+git log
+puoi anche utilizzare meno caratteri per l'id della commit, basta che sia unico.
